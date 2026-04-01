@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== LOGIN PAGE ===== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #5568d3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.alert {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.tab-btn.active {
+    background-color: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ===== DASHBOARD ===== */
+.navbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar h1 {
+    font-size: 24px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-logout {
+    background-color: #e74c3c;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+
+.dashboard-content {
+    padding: 20px 0;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+}
+
+/* ===== PRODUK MANAGEMENT ===== */
+.btn-add {
+    background-color: #27ae60;
+    margin-bottom: 20px;
+}
+
+.btn-add:hover {
+    background-color: #229954;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th {
+    background-color: #34495e;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.btn-edit {
+    background-color: #3498db;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.btn-edit:hover {
+    background-color: #2980b9;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
+/* ===== KASIR PAGE ===== */
+.kasir-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.produk-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.produk-item {
+    background: white;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.produk-item:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+}
+
+.produk-item h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    min-height: 30px;
+}
+
+.produk-item .harga {
+    color: #27ae60;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.produk-item .stok {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.produk-item .btn-tambah {
+    width: 100%;
+    padding: 8px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.produk-item .btn-tambah:hover {
+    background-color: #2980b9;
+}
+
+.cart-section {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.cart-section h3 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ecf0f1;
+    font-size: 13px;
+}
+
+.cart-item-name {
+    flex: 1;
+}
+
+.cart-item-qty {
+    width: 50px;
+}
+
+.cart-item-qty input {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.cart-item-price {
+    width: 80px;
+    text-align: right;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.cart-item-delete {
+    width: 30px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #ecf0f1;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.summary-row.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.btn-checkout {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #27ae60;
+    font-size: 16px;
+    padding: 15px;
+}
+
+.btn-checkout:hover {
+    background-color: #229954;
+}
+
+.btn-clear {
+    width: 100%;
+    background-color: #e74c3c;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.btn-clear:hover {
+    background-color: #c0392b;
+}
+
+/* ===== MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #7f8c8d;
+}
+
+.modal-close:hover {
+    color: #2c3e50;
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* ===== LAPORAN ===== */
+.laporan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.laporan-header input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .kasir-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .produk-list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .cart-section {
+        position: relative;
+        top: 0;
+    }
+}
